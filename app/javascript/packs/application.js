@@ -30,4 +30,7 @@ function rm(){
     flash.parentNode.removeChild(flash)
 }
 
-// window.alert('window now')
+// window.alert('window now')// Support component names relative to this directory:
+var componentRequireContext = require.context("components", true);
+var ReactRailsUJS = require("react_ujs");
+ReactRailsUJS.useContext(componentRequireContext);
