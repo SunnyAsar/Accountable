@@ -1,4 +1,5 @@
-import { SET_ACCOUNTS, SET_ACCOUNT } from '../actions/actionConstants'
+import { SET_ACCOUNTS, SET_ACCOUNT,INSERT_ACCOUNT } from '../actions/actionConstants'
+
 
 const initialState = {
 
@@ -15,6 +16,11 @@ const account = (state= initialState, action) => {
       return {
         ...state,
         account: action.payload
+      }
+    case INSERT_ACCOUNT:
+      return{
+        ...state,
+        accounts: [action.payload, ...state.accounts]
       }
     case 'TOKEN':
       return {

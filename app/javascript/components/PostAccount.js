@@ -22,6 +22,13 @@ class PostAccount extends React.Component {
     e.preventDefault()
     console.log(this.state)
     this.props.postAccount({ account: this.state }, this.props.token) 
+    this.setState({
+      title:'',
+      account_type: '',
+      amount: 0,
+      date:'',
+      description: ''
+    })
   }
 
 
@@ -33,12 +40,12 @@ class PostAccount extends React.Component {
           <div className="field is-horizontal">
             <div className="field-body">
               <div className="field control is-two-thirds">
-                <input className="input" name="title" onChange={this.handleChange} type="text" placeholder="Title for expense of income"/>
+                <input className="input" name="title" value={this.state.title} onChange={this.handleChange} type="text" placeholder="Title for expense of income"/>
               </div>
 
               <div className="field control is-narrow">
                 <div className="select is-fullwidth">
-                  <select name="account_type" onChange={this.handleChange}>
+                  <select name="account_type" onChange={this.handleChange} value={this.state.account_type}>
                     <option value='#' selected disabled required>Account Type</option>
                     <option value="income">Income</option>
                     <option value="expense">Expense</option>
@@ -53,10 +60,10 @@ class PostAccount extends React.Component {
             <div className="field-body">
               
               <div className="field control is-narrow">
-                <input className="input" name="amount" onChange={this.handleChange} type="number" placeholder="Amount"/>
+                <input className="input" name="amount" onChange={this.handleChange} value={this.state.amount} type="number" placeholder="Amount"/>
               </div>
               <div className="field control is-narrows">
-                <input className="input" name="date" onChange={this.handleChange} type="date" placeholder="Date"/>
+                <input className="input" name="date" onChange={this.handleChange} value={this.state.date} type="date" placeholder="Date"/>
               </div>
 
             </div>
@@ -66,7 +73,7 @@ class PostAccount extends React.Component {
           <div className="field is-horizontal">
             <div className="field-body">
               <div className="field control">
-                <textarea className="textarea" name="description" onChange={this.handleChange} type="text" placeholder="Describe the details of funds source or expense">
+                <textarea className="textarea" name="description" onChange={this.handleChange} value={this.state.description} type="text" placeholder="Describe the details of funds source or expense">
 
                 </textarea>
               </div>

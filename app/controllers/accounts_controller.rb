@@ -2,14 +2,14 @@ class AccountsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @account = Account.all
+    @account = current_user.accounts.take(10)
     render json: @account
   end
 
   def create
     @account = current_user.accounts.build(account_params)
     if @account.save
-      render json: @account, status: :ok
+      render json: @account.to_json, status: :ok
     else
       render json: { error: 'something went wrong' }, status: :unprocessable_entity
     end

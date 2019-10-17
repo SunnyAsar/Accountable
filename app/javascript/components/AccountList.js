@@ -3,15 +3,24 @@ import PropTypes from "prop-types"
 import PostAccount from "./PostAccount"
 import { connect } from 'react-redux'
 import { fetchAccounts } from '../actions/accountActions'
+import Account from "./Account"
 
 
 class AccountList extends React.Component {
- 
-
+  state = {
+    accounts: []
+  }
+  componentDidMount () {
+    this.props.getAccounts()
+  }
   render () {
+    const { accounts } = this.props
+      const AccountsData =  (accounts && accounts.length > 0) ? (accounts.map((account, index) => {
+        return (<Account account={account} key={account.id} index={index} />)
+      })) : ('something is happening')
+
     return (
      <div className="container is-fluid">
-
        <div className="columns">
           <div className="column">
             <PostAccount/>
@@ -42,32 +51,10 @@ class AccountList extends React.Component {
                   </tr>
                 </tfoot>
                 <tbody>
-                  <tr>
-                    <th>1</th>
-                    <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C." title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
-                    </td>
-                    <td className="">38</td>
-                    <td>23</td>
-                    <td></td>
-                    <td>68</td>
-                  </tr>
-                  <tr className="is-primary is-selected">
-                    <th>2</th>
-                    <td><a href="https://en.wikipedia.org/wiki/Arsenal_F.C." title="Arsenal F.C.">Arsenal</a></td>
-                    <td>38</td>
-                    <td>11</td>
-                    <td>Income</td>
-                    <td>65</td>
-
-                  </tr>
-                  <tr className="is-warning">
-                    <th>3</th>
-                    <td><a href="https://en.wikipedia.org/wiki/Tottenham_Hotspur_F.C." title="Tottenham Hotspur F.C.">Tottenham Hotspur</a></td>
-                    <td>38</td>
-                    <td>13</td>
-                    <td className="is-warning">Expense</td>
-                    <td>69</td>
-                  </tr>
+                  {/* {accounts && accounts.length > 0 ? accounts.map(account =>{
+                      <h2>account.id</h2>
+                  }) : 'sorry' } */}
+                  {AccountsData}
                 </tbody>
               </table>
             </section>
@@ -87,10 +74,10 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = () => {
+const mapDispatchToProps = (dispatch) => {
   return {
     getAccounts: () => dispatch(fetchAccounts())
   }
 }
 
-export default connect()(AccountList)
+export default connect(mapStateToProps,mapDispatchToProps)(AccountList)
