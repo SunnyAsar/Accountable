@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pages#index'
   resources :accounts, defaults: { format: :json }
+  get 'transactions', to: 'pages#index'
   get 'about', to: 'pages#about'
   get '*a', to: 'pages#index'
 

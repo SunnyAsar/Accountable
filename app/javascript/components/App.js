@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import AccountList from "./AccountList"
 import Account from "./Account"
+import History from "./History"
 import store from '../reducers/index'
 
 
@@ -15,10 +16,11 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <Router>
-        <Link to='/account'>Account</Link>
+        {/* <Link to='/account'>Account</Link> */}
         <Switch>
           <Route exact path='/' component={AccountList} />
           <Route path='/account' component={Account}/>
+          <Route path='/transactions' component={History}/>
         </Switch>
         </Router>
       </Provider>

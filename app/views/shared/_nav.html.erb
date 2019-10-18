@@ -15,13 +15,11 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-end">
-      <a class="navbar-item">
-        Home
-      </a>
+      
+      <%= link_to 'Home', root_path, class: 'navbar-item'%>
 
-      <a class="navbar-item">
-        Money Trail
-      </a>
+      
+      <%= link_to 'Money Trail', transactions_path, class: 'navbar-item'%>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
@@ -45,9 +43,7 @@
         </div>
       </div>
 
-      <a class="navbar-item">
-        About
-      </a>
+      <%= link_to 'About', about_path, class: 'navbar-item'%>
     </div>
 
     <div class="navbar-end">

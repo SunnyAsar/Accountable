@@ -21,14 +21,17 @@ class PostAccount extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault()
     console.log(this.state)
-    this.props.postAccount({ account: this.state }, this.props.token) 
-    this.setState({
-      title:'',
-      account_type: '',
-      amount: 0,
-      date:'',
-      description: ''
-    })
+    this.props.postAccount({ account: this.state }, this.props.token)
+      .then(()=> {
+        this.setState({
+          title:'',
+          account_type: '',
+          amount: 0,
+          date:'',
+          description: ''
+        })
+      }) 
+    
   }
 
 
