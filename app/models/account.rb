@@ -3,4 +3,8 @@ class Account < ApplicationRecord
 
   enum account_type: [:income, :expense]
   belongs_to :user
+
+  validates :title, presence: true
+  validates :amount, presence: true
+  validates :account_type, presence: true
 end

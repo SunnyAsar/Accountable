@@ -2,7 +2,7 @@ class AccountsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @account = current_user.accounts.take(10)
+    @account = current_user.accounts.take(15)
     render json: @account
   end
 

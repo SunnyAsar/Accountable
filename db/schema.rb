@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_17_201549) do
+ActiveRecord::Schema.define(version: 2019_10_18_173230) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -28,6 +28,19 @@ ActiveRecord::Schema.define(version: 2019_10_17_201549) do
     t.index ["user_id"], name: "index_accounts_on_user_id"
   end
 
+  create_table "invoices", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "title"
+    t.decimal "amount"
+    t.text "description"
+    t.string "customer_email"
+    t.boolean "one_time"
+    t.integer "status"
+    t.uuid "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_invoices_on_user_id"
+  end
+
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -43,4 +56,5 @@ ActiveRecord::Schema.define(version: 2019_10_17_201549) do
   end
 
   add_foreign_key "accounts", "users"
+  add_foreign_key "invoices", "users"
 end

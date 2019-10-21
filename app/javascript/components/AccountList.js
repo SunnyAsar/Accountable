@@ -20,49 +20,35 @@ class AccountList extends React.Component {
       })) : ('something is happening')
 
     return (
-     <div className="container is-fluid">
-       <div className="columns">
-          <div className="column">
-            <PostAccount/>
-          </div>
-
-          <div className="column is-three-fifths">
-            <section className="section">
-              <h2 className="title has-text-link is-5 small has-text-centered"> Latest Account of Income and Expenses</h2>
-              <table className="table is-hoverable is-fullwidth is-narrow is-striped">
-                <thead>
-                  <tr>
-                    <th><abbr title="Position">Pos</abbr></th>
-                    <th>Title</th>
-                    <th><abbr title="Won">Amount</abbr></th>
-                    <th><abbr title="Drawn">Date</abbr></th>
-                    <th><abbr title="Lost">Funds Type</abbr></th>
-                    <th><abbr title="Goals for">Actions</abbr></th>
-                  </tr>
-                </thead>
-                <tfoot>
-                  <tr>
-                  <th><abbr title="Position">Pos</abbr></th>
-                    <th>Title</th>
-                    <th><abbr title="Won">Amount</abbr></th>
-                    <th><abbr title="Drawn">Date</abbr></th>
-                    <th><abbr title="Lost">Funds Type</abbr></th>
-                    <th><abbr title="Goals for">Actions</abbr></th>
-                  </tr>
-                </tfoot>
-                <tbody>
-                  {/* {accounts && accounts.length > 0 ? accounts.map(account =>{
-                      <h2>account.id</h2>
-                  }) : 'sorry' } */}
-                  {AccountsData}
-                </tbody>
-              </table>
-            </section>
-          </div>
-       </div>
-
-      
-     </div>
+        <table style={{overflowY:'scroll',
+          height:'25vh',
+          maxWidth: '100%',
+          // display:'inline',
+          }} className="table is-hoverable is-fullwidth is-narrow is-striped">
+          <thead>
+            <tr>
+              <th><abbr title="Position">Pos</abbr></th>
+              <th>Title</th>
+              <th><abbr title="Won">Amount</abbr></th>
+              <th><abbr title="Drawn">Date</abbr></th>
+              <th><abbr title="Lost">Funds Type</abbr></th>
+              <th><abbr title="Goals for">Actions</abbr></th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+            <th><abbr title="Position">Pos</abbr></th>
+              <th>Title</th>
+              <th><abbr title="Won">Amount</abbr></th>
+              <th><abbr title="Drawn">Date</abbr></th>
+              <th><abbr title="Lost">Funds Type</abbr></th>
+              <th><abbr title="Goals for">Actions</abbr></th>
+            </tr>
+          </tfoot>
+          <tbody>
+            {AccountsData}
+          </tbody>
+        </table>
     );
   }
 }
