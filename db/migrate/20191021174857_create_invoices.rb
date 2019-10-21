@@ -5,9 +5,9 @@ class CreateInvoices < ActiveRecord::Migration[6.0]
       t.decimal :amount
       t.text :description
       t.string :customer_email
-      t.boolean :one_time
+      t.boolean :recurring, default: false
       t.integer :status
-      t.references :user, null: false,type: :uuid, foreign_key: true
+      t.references :user, type: :uuid, null: false, foreign_key: true
 
       t.timestamps
     end

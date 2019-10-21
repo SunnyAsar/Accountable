@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'invoices/index'
+  get 'invoices/create'
+  get 'invoices/update'
+  get 'invoices/destroy'
   # get 'accounts/index'
   # get 'accounts/create'
   # get 'accounts/update'
