@@ -10,8 +10,18 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+   
+    <% flash.each do |name, msg|%>
+      <div class="container is-centered" id="flashBox">
+        <%= content_tag :div, class: " notification is-#{ name == "notice" ? "primary" : "danger" } " do %>
+            <p class="notice"><%= msg %></p>
+        <%end%>
+      </div>
+    <%end%>
+
+    <%= render 'shared/nav' %>
+
+
     <%= yield %>
   </body>
 </html>
