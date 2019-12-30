@@ -23,7 +23,6 @@ class AccountList extends React.Component {
         <table style={{overflowY:'scroll',
           height:'25vh',
           maxWidth: '100%',
-          // display:'inline',
           }} className="table is-hoverable is-fullwidth is-narrow is-striped">
           <thead>
             <tr>
@@ -32,7 +31,7 @@ class AccountList extends React.Component {
               <th><abbr title="Won">Amount</abbr></th>
               <th><abbr title="Drawn">Date</abbr></th>
               <th><abbr title="Lost">Funds Type</abbr></th>
-              <th><abbr title="Goals for">Actions</abbr></th>
+              {/* <th><abbr title="Goals for">Actions</abbr></th> */}
             </tr>
           </thead>
           <tfoot>
@@ -42,7 +41,7 @@ class AccountList extends React.Component {
               <th><abbr title="Won">Amount</abbr></th>
               <th><abbr title="Drawn">Date</abbr></th>
               <th><abbr title="Lost">Funds Type</abbr></th>
-              <th><abbr title="Goals for">Actions</abbr></th>
+              {/* <th><abbr title="Goals for">Actions</abbr></th> */}
             </tr>
           </tfoot>
           <tbody>

@@ -1,31 +1,47 @@
-<section class="container is-vcentered">
-  <div class="Form">
-    <h2 class="title">Log in</h2>
-
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="field">
-        <%= f.label :email, class: 'label' %>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'input' %>
-      </div>
-
-      <div class="field">
-        <%= f.label :password , class: 'label'%>
-        <%= f.password_field :password, autocomplete: "current-password", class: 'input' %>
-      </div>
-
-      <% if devise_mapping.rememberable? %>
-        <div class="field">
-          <%= f.check_box :remember_me %>
-          <%= f.label :remember_me, class: 'label' %>
-        </div>
-      <% end %>
-
-      <div class="actions">
-        <%= f.submit "Log in", class: 'button is-primary' %>
-      </div>
-    <% end %>
-
-    <%= render "devise/shared/links" %>
-
+<section class="container">
+<div class="columns ">
+  <div class="column is-half first">
+    <h2 class="title has-text-grey "> Accountable </h2>
+    <h3 class="subtitle is-6 has-text-primary"> Putting your finances under check and mate ! </h3>
   </div>
+
+  <div class="column is half second">
+     <div class="Form">
+        <h5 class="is-h6 small">Log in</h5>
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <%= f.label :email, class: 'label' %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'input' %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password , class: 'label'%>
+            <%= f.password_field :password, autocomplete: "current-password", class: 'input' %>
+          </div>
+
+          <% if devise_mapping.rememberable? %>
+            <div class="field">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me, class: 'label' %>
+            </div>
+          <% end %>
+
+          <div class="actions">
+            <%= f.submit "Log in", class: 'button is-primary' %>
+          </div>
+        <% end %>
+
+        <%= render "devise/shared/links" %>
+
+      </div>
+  </div>
+  
+</div>
+
+
+
+
+
 </section>
+

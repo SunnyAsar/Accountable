@@ -28,3 +28,22 @@
     width: 100%
    }
  }
+
+ .column.first{
+   display: flex;
+   flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30px; 
+
+    h2{
+      font-family: 'Sacramento', cursive;
+      font-size: 90px;
+    }
+   
+   
+ }
+ .second{
+  margin-top: 50px;
+
+ }
