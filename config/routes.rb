@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'pages#index'
   resources :accounts, defaults: { format: :json }
   resources :invoices, defaults: { format: :json }
-  
+
   get 'transactions', to: 'pages#index'
   get 'about', to: 'pages#about'
   get '*a', to: 'pages#index'
