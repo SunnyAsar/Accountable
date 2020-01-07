@@ -13,7 +13,7 @@ class Account extends React.Component {
         <td>$ {amount}</td>
         <td className="small">{moment(`${date}`).format("MMM Do YY")}</td>
         <td className={`is-capitalized has-text-centered ${(account_type == 'income') ? ('is-primary'): ('is-warning') }`}>{account_type}</td>
-        <td>65</td>
+        {/* <td>65</td> */}
     </tr>
     );
   }

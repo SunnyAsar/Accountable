@@ -22,15 +22,14 @@ class PostAccount extends React.Component {
     e.preventDefault()
     console.log(this.state)
     this.props.postAccount({ account: this.state }, this.props.token)
-      .then(()=> {
-        this.setState({
-          title:'',
-          account_type: '',
-          amount: 0,
-          date:'',
-          description: ''
-        })
-      }) 
+     
+      this.setState({
+        title:'',
+        account_type: '',
+        amount: 0,
+        date:'',
+        description: ''
+      })
     
   }
 

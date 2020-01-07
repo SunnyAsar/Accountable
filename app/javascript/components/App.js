@@ -7,6 +7,7 @@ import AccountList from "./AccountList"
 import Account from "./Account"
 import History from "./History"
 import Home from './Home'
+import PostInvoice from './PostInvoice'
 import store from '../reducers/index'
 
 
@@ -22,6 +23,7 @@ class App extends React.Component {
           <Route exact path='/' component={Home} />
           <Route path='/account' component={Account}/>
           <Route path='/transactions' component={History}/>
+          <Route path='/invoice/new' component={PostInvoice}/>
         </Switch>
         </Router>
       </Provider>
