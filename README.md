@@ -3,13 +3,20 @@ Accountable a way to handle and make sense of your finances.
 
 ![screenshot](./public/accountable.png)
 
-Accountable provides a way to handle finances, track your income, expenditure and make more informed financial decisions. The data from each account is visuallized on a chart for the users sanitity.
+Accountable provides a way to handle finances, track your income, expenditure and make more informed financial decisions. The data from each account is visuallized on a chart to help the user see their speding and earning history.
 
 ## Built With
 
 - Javscript, Ruby,
 - Rails, Devise, React and Redux 
 - Bulma and Sass.
+
+
+
+## Live Demo
+
+[Live Demo Link](https://accountable-person.herokuapp.com/)
+
 
 ## Getting Started
 
