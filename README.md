@@ -3,7 +3,7 @@ Accountable a way to handle and make sense of your finances.
 
 ![screenshot](./public/accountable.png)
 
-Accountable provides a way to handle finances, track your income, expenditure and make more informed financial decisions. The data from each account is visuallized on a chart to help the user see their speding and earning history.
+Accountable provides a way to handle finances, track your income, expenditure and make more informed financial decisions. The data from each account is visualized on a chart to help the user see their spending and earning history.
 
 ## Built With
 
@@ -19,8 +19,6 @@ Accountable provides a way to handle finances, track your income, expenditure an
 
 
 ## Getting Started
-
-**This is what needs to be done to  on set up this project locally.**
 
 
 To get a local copy up and running follow these simple example steps.
@@ -48,13 +46,13 @@ run `rails s` to get the project running
 👤 **Author**
 
 - Github: [@SunnyAsar](https://github.com/SunnyAsar)
-- Linkedin: [Sunny Asar](https://www.linkedin.com/in/sunny-asar-905648101/)
+- Linkedin: [Sunny Asar](https://www.linkedin.com/in/sunnyasar)
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/SunnyAsar/Accountable/issues).
 
 ## Show your support
 
