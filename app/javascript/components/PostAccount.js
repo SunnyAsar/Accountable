@@ -5,7 +5,7 @@ import { PostNewAccount } from '../actions/accountActions'
 class PostAccount extends React.Component {
   state = {
     title:'',
-    account_type: '',
+    account_type: 'income',
     amount: 0,
     date:'',
     description: ''
@@ -48,7 +48,6 @@ class PostAccount extends React.Component {
               <div className="field control is-narrow">
                 <div className="select is-fullwidth">
                   <select name="account_type" onChange={this.handleChange} value={this.state.account_type}>
-                    <option value='#' selected disabled required>Account Type</option>
                     <option value="income">Income</option>
                     <option value="expense">Expense</option>
                   </select>

@@ -1,7 +1,7 @@
 import { SET_ACCOUNTS, SET_ACCOUNT, INSERT_ACCOUNT } from './actionConstants'
 import axios from 'axios'
-// const BASE_URL = 'http://localhost:3000'
-const BASE_URL = 'https://accountable-person.herokuapp.com/'
+const BASE_URL = 'http://localhost:3000'
+// const BASE_URL = 'https://accountable-person.herokuapp.com'
 
 export const PostNewAccount = (accountData,token) => {
   return (dispatch) => {
