@@ -6,7 +6,7 @@ class PostAccount extends React.Component {
   state = {
     title:'',
     account_type: 'income',
-    amount: 0,
+    amount: null,
     date:'',
     description: ''
 

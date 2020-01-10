@@ -6,5 +6,4 @@ class Account < ApplicationRecord
 
   validates :title, presence: true
   validates :amount, presence: true
-  validates :account_type, presence: true
 end

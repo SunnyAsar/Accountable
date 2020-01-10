@@ -1,7 +1,7 @@
 import { SET_ACCOUNTS, SET_ACCOUNT, INSERT_ACCOUNT, DELETE_ACCOUNT } from './actionConstants'
 import axios from 'axios'
-// const BASE_URL = 'http://localhost:3000/accounts'
-const BASE_URL = 'https://accountable-person.herokuapp.com/accounts'
+const BASE_URL = 'http://localhost:3000/accounts'
+// const BASE_URL = 'https://accountable-person.herokuapp.com/accounts'
 
 export const PostNewAccount = (accountData,token) => {
   return (dispatch) => {
@@ -27,6 +27,8 @@ export const DeleteAccount = (id,token) => {
     .then(res => {
       console.log(res)
       dispatch({type:DELETE_ACCOUNT, payload:res.data})
+    }).catch(err => {
+      console.log(err.response.data)
     })
     
   }

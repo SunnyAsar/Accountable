@@ -12,7 +12,7 @@ class AccountsController < ApplicationController
     if @account.save
       render json: @account.to_json, status: :ok
     else
-      render json: { error: 'something went wrong' }, status: :unprocessable_entity
+      render json: {message: 'somthing went wrong', error: @account.errors }, status: :unprocessable_entity
     end
   end
 
