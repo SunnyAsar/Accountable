@@ -26,22 +26,22 @@ class AccountList extends React.Component {
           }} className="table is-hoverable is-fullwidth is-narrow is-striped">
           <thead>
             <tr>
-              <th><abbr title="Position">Pos</abbr></th>
+              <th><abbr title="serial number">Pos</abbr></th>
               <th>Title</th>
-              <th><abbr title="Won">Amount</abbr></th>
-              <th><abbr title="Drawn">Date</abbr></th>
-              <th><abbr title="Lost">Funds Type</abbr></th>
-              {/* <th><abbr title="Goals for">Actions</abbr></th> */}
+              <th><abbr title="Amount">Amount</abbr></th>
+              <th><abbr title="Date of account">Date</abbr></th>
+              <th><abbr title="Income or expense">Funds Type</abbr></th>
+              <th><abbr title="Actions">Actions</abbr></th>
             </tr>
           </thead>
           <tfoot>
             <tr>
-            <th><abbr title="Position">Pos</abbr></th>
+            <th><abbr title="serial number">Pos</abbr></th>
               <th>Title</th>
-              <th><abbr title="Won">Amount</abbr></th>
-              <th><abbr title="Drawn">Date</abbr></th>
-              <th><abbr title="Lost">Funds Type</abbr></th>
-              {/* <th><abbr title="Goals for">Actions</abbr></th> */}
+              <th><abbr title="Amount">Amount</abbr></th>
+              <th><abbr title="Date of account">Date</abbr></th>
+              <th><abbr title="Income or expense">Funds Type</abbr></th>
+              <th><abbr title="Actions">Actions</abbr></th>
             </tr>
           </tfoot>
           <tbody>

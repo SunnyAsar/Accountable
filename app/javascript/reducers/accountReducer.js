@@ -1,4 +1,4 @@
-import { SET_ACCOUNTS, SET_ACCOUNT,INSERT_ACCOUNT } from '../actions/actionConstants'
+import { SET_ACCOUNTS, SET_ACCOUNT,INSERT_ACCOUNT, DELETE_ACCOUNT } from '../actions/actionConstants'
 
 
 const initialState = {
@@ -21,6 +21,11 @@ const account = (state= initialState, action) => {
       return{
         ...state,
         accounts: [action.payload, ...state.accounts]
+      }
+    case DELETE_ACCOUNT:
+      return {
+        ...state,
+        accounts: state.accounts.filter(account => account.id != action.payload.id)
       }
     case 'TOKEN':
       return {
