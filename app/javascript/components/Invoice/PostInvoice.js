@@ -43,7 +43,6 @@ class PostInvoice extends React.Component {
                   </div>
                 </div>
 
-                {/* Editor code */}
                 <div style={styles.editor} onClick={this.focusEditor}>
                     <Editor
                       ref={this.setEditor}

@@ -7,7 +7,7 @@ import AccountList from "./AccountList"
 import Account from "./Account"
 import History from "./History"
 import Home from './Home'
-import PostInvoice from './PostInvoice'
+import PostInvoice from './Invoice/PostInvoice'
 import store from '../reducers/index'
 
 
